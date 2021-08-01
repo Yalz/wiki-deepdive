@@ -1,0 +1,301 @@
+children:
+- children:
+  - link: /wiki/Video_game_genres
+    name: Video_game_genres
+  - link: /wiki/Simulation_video_game
+    name: Simulation_video_game
+  - link: /wiki/SimCity
+    name: SimCity
+  - link: /wiki/Cities_XXL
+    name: Cities_XXL
+  - link: /wiki/Cities:_Skylines
+    name: Cities:_Skylines
+  - link: /wiki/Construction_and_management_simulation
+    name: Construction_and_management_simulation
+  link: /wiki/City-building_game
+  name: City-building_game
+- children:
+  - link: /wiki/Video_game_developer
+    name: Video_game_developer
+  - link: /wiki/Los_Altos,_California
+    name: Los_Altos,_California
+  - link: /wiki/Stonehearth
+    name: Stonehearth
+  - link: /wiki/Riot_Games
+    name: Riot_Games
+  - link: /wiki/Rising_Thunder_(video_game)
+    name: Rising_Thunder_(video_game)
+  - link: /wiki/Freeware
+    name: Freeware
+  link: /wiki/Radiant_Entertainment
+  name: Radiant_Entertainment
+- children:
+  - link: /wiki/Video_game_industry
+    name: Video_game_industry
+  - link: /wiki/Software_release_life_cycle
+    name: Software_release_life_cycle
+  - link: /wiki/Indie_game
+    name: Indie_game
+  link: /wiki/Early_access
+  name: Early_access
+- children:
+  - link: /wiki/Proprietary_software
+    name: Proprietary_software
+  - link: /wiki/Graphical_user_interface
+    name: Graphical_user_interface
+  - link: /wiki/Operating_system
+    name: Operating_system
+  - link: /wiki/Microsoft
+    name: Microsoft
+  - link: /wiki/Windows_NT
+    name: Windows_NT
+  - link: /wiki/Windows_IoT
+    name: Windows_IoT
+  - link: /wiki/Windows_Server
+    name: Windows_Server
+  - link: /wiki/Windows_Embedded_Compact
+    name: Windows_Embedded_Compact
+  - link: /wiki/Windows_9x
+    name: Windows_9x
+  - link: /wiki/Windows_Mobile
+    name: Windows_Mobile
+  - link: /wiki/Windows_Phone
+    name: Windows_Phone
+  - link: /wiki/Operating_environment
+    name: Operating_environment
+  - link: /wiki/Operating_system_shell
+    name: Operating_system_shell
+  - link: /wiki/MS-DOS
+    name: MS-DOS
+  - link: /wiki/Dominance_(economics)
+    name: Dominance_(economics)
+  - link: /wiki/Personal_computer
+    name: Personal_computer
+  - link: /wiki/Usage_share_of_operating_systems
+    name: Usage_share_of_operating_systems
+  - link: /wiki/Classic_Mac_OS
+    name: Classic_Mac_OS
+  - link: /wiki/Apple_Lisa
+    name: Apple_Lisa
+  - link: /wiki/Macintosh
+    name: Macintosh
+  - link: /wiki/Android_(operating_system)
+    name: Android_(operating_system)
+  - link: /wiki/Smartphone
+    name: Smartphone
+  - link: /wiki/Tablet_computers
+    name: Tablet_computers
+  - link: /wiki/Embedded_system
+    name: Embedded_system
+  - link: /wiki/Windows_10
+    name: Windows_10
+  - link: /wiki/Server_(computing)
+    name: Server_(computing)
+  - link: /wiki/Xbox_One_system_software
+    name: Xbox_One_system_software
+  - link: /wiki/Xbox_One
+    name: Xbox_One
+  - link: /wiki/Xbox_Series_X_and_Series_S
+    name: Xbox_Series_X_and_Series_S
+  - link: /wiki/Video_game_console
+    name: Video_game_console
+  link: /wiki/Microsoft_Windows
+  name: Microsoft_Windows
+- children:
+  - link: /wiki/Apple_Inc.
+    name: Apple_Inc.
+  - link: /wiki/Usage_share_of_operating_systems#Desktop_and_laptop_computers
+    name: Usage_share_of_operating_systems#Desktop_and_laptop_computers
+  - link: /wiki/Macintosh_operating_system
+    name: Macintosh_operating_system
+  - link: /wiki/Steve_Jobs
+    name: Steve_Jobs
+  - link: /wiki/NeXT_Computer
+    name: NeXT_Computer
+  - link: /wiki/NeXTSTEP
+    name: NeXTSTEP
+  - link: /wiki/Mac_OS_X_10.0
+    name: Mac_OS_X_10.0
+  - link: /wiki/Mac_OS_X_Leopard
+    name: Mac_OS_X_Leopard
+  - link: /wiki/UNIX_03
+    name: UNIX_03
+  - link: /wiki/OS_X_Lion
+    name: OS_X_Lion
+  - link: /wiki/IOS
+    name: IOS
+  - link: /wiki/Brand_identity
+    name: Brand_identity
+  - link: /wiki/Roman_numerals
+    name: Roman_numerals
+  - link: /wiki/IPhone_X
+    name: IPhone_X
+  - link: /wiki/Code_name
+    name: Code_name
+  - link: /wiki/Big_cat
+    name: Big_cat
+  - link: /wiki/California
+    name: California
+  - link: /wiki/WatchOS
+    name: WatchOS
+  - link: /wiki/TvOS
+    name: TvOS
+  - link: /wiki/Software_versioning
+    name: Software_versioning
+  - link: /wiki/MacOS_Big_Sur
+    name: MacOS_Big_Sur
+  - link: /wiki/MacOS_Monterey
+    name: MacOS_Monterey
+  - link: /wiki/PowerPC
+    name: PowerPC
+  - link: /wiki/Mac_transition_to_Intel_processors
+    name: Mac_transition_to_Intel_processors
+  - link: /wiki/Apple%E2%80%93Intel_architecture
+    name: "Apple\u2013Intel_architecture"
+  - link: /wiki/Mac_transition_to_Apple_silicon
+    name: Mac_transition_to_Apple_silicon
+  - link: /wiki/AArch64
+    name: AArch64
+  - link: /wiki/Apple_M1
+    name: Apple_M1
+  link: /wiki/MacOS
+  name: MacOS
+- children:
+  - link: /wiki/Free_and_open-source_software
+    name: Free_and_open-source_software
+  - link: /wiki/Unix-like
+    name: Unix-like
+  - link: /wiki/Linux_kernel
+    name: Linux_kernel
+  - link: /wiki/Kernel_(computing)
+    name: Kernel_(computing)
+  - link: /wiki/Linus_Torvalds
+    name: Linus_Torvalds
+  - link: /wiki/Package_manager
+    name: Package_manager
+  - link: /wiki/Linux_distribution
+    name: Linux_distribution
+  - link: /wiki/System_software
+    name: System_software
+  - link: /wiki/Library_(computer_science)
+    name: Library_(computer_science)
+  - link: /wiki/GNU_Project
+    name: GNU_Project
+  - link: /wiki/Free_Software_Foundation
+    name: Free_Software_Foundation
+  - link: /wiki/GNU
+    name: GNU
+  - link: /wiki/GNU/Linux_naming_controversy
+    name: GNU/Linux_naming_controversy
+  - link: /wiki/Debian
+    name: Debian
+  - link: /wiki/Fedora_(operating_system)
+    name: Fedora_(operating_system)
+  - link: /wiki/Ubuntu
+    name: Ubuntu
+  - link: /wiki/Red_Hat_Enterprise_Linux
+    name: Red_Hat_Enterprise_Linux
+  - link: /wiki/SUSE_Linux_Enterprise_Server
+    name: SUSE_Linux_Enterprise_Server
+  - link: /wiki/Windowing_system
+    name: Windowing_system
+  - link: /wiki/X11
+    name: X11
+  - link: /wiki/Wayland_(display_server_protocol)
+    name: Wayland_(display_server_protocol)
+  - link: /wiki/Desktop_environment
+    name: Desktop_environment
+  - link: /wiki/GNOME
+    name: GNOME
+  - link: /wiki/KDE_Plasma
+    name: KDE_Plasma
+  - link: /wiki/Computer_graphics
+    name: Computer_graphics
+  - link: /wiki/Solution_stack
+    name: Solution_stack
+  - link: /wiki/LAMP_(software_bundle)
+    name: LAMP_(software_bundle)
+  - link: /wiki/Intel_x86
+    name: Intel_x86
+  - link: /wiki/Porting
+    name: Porting
+  - link: /wiki/Computer_hardware_platforms
+    name: Computer_hardware_platforms
+  - link: /wiki/Installed_base
+    name: Installed_base
+  - link: /wiki/General-purpose_operating_system
+    name: General-purpose_operating_system
+  - link: /wiki/Desktop_computer
+    name: Desktop_computer
+  - link: /wiki/Chromebook
+    name: Chromebook
+  - link: /wiki/Chrome_OS
+    name: Chrome_OS
+  - link: /wiki/K%E2%80%9312
+    name: "K\u201312"
+  - link: /wiki/Laptop
+    name: Laptop
+  - link: /wiki/Big_iron_(computing)
+    name: Big_iron_(computing)
+  - link: /wiki/Mainframe_computer
+    name: Mainframe_computer
+  - link: /wiki/TOP500
+    name: TOP500
+  - link: /wiki/Supercomputer
+    name: Supercomputer
+  - link: /wiki/Firmware
+    name: Firmware
+  - link: /wiki/Router_(computing)
+    name: Router_(computing)
+  - link: /wiki/Automation
+    name: Automation
+  - link: /wiki/Smart_home_technology
+    name: Smart_home_technology
+  - link: /wiki/Google_Nest
+    name: Google_Nest
+  - link: /wiki/Television
+    name: Television
+  - link: /wiki/Smart_TV
+    name: Smart_TV
+  - link: /wiki/Tizen
+    name: Tizen
+  - link: /wiki/WebOS
+    name: WebOS
+  - link: /wiki/Automobiles
+    name: Automobiles
+  - link: /wiki/Digital_video_recorder
+    name: Digital_video_recorder
+  - link: /wiki/Smartwatch
+    name: Smartwatch
+  - link: /wiki/Falcon_9
+    name: Falcon_9
+  - link: /wiki/SpaceX_Dragon_2
+    name: SpaceX_Dragon_2
+  - link: /wiki/Avionics
+    name: Avionics
+  - link: /wiki/Software
+    name: Software
+  - link: /wiki/Source_code
+    name: Source_code
+  - link: /wiki/GNU_General_Public_License
+    name: GNU_General_Public_License
+  - link: /wiki/Cloud_computing
+    name: Cloud_computing
+  link: /wiki/Linux
+  name: Linux
+- children:
+  - link: /wiki/Internet
+    name: Internet
+  - link: /wiki/Crowdsourcing
+    name: Crowdsourcing
+  - link: /wiki/Alternative_Finance
+    name: Alternative_Finance
+  - link: /wiki/Entrepreneurship
+    name: Entrepreneurship
+  - link: /wiki/Social_entrepreneurship
+    name: Social_entrepreneurship
+  - link: /wiki/Quackery
+    name: Quackery
+  link: /wiki/Crowdfunding
+  name: Crowdfunding
+name: Stonehearth
