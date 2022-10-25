@@ -29,10 +29,12 @@ def between(html, start, end):
 
 
 wikiUrl = 'https://en.wikipedia.org'
-query = '/wiki/Stonehearth'
+query = '/wiki/Abdullah_II_of_Jordan'
 
 url = wikiUrl + query
 reqs = requests.get(url)
 html = reqs.text
 
 html = process_content(html)
+
+print(html)
