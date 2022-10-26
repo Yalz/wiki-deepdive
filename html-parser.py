@@ -1,35 +1,35 @@
 from bs4 import BeautifulSoup
 import requests
-
+import re
 
 def process_content(html):
     # parse html content
     soup = BeautifulSoup(html, "html.parser")
 
     div = soup.find(id="mw-content-text")
-    div = next(div.children, None)
 
-    output = BeautifulSoup("", "html.parser")
-    for x in between(div, div.find('p'), div.find('h2')):
-        output.append(x)
+
+    output = []
+
+    
+    #print(div)
+
+    for x in getLinksUntilTag(div, div.find('h2'), "^/wiki/(?!.*:).*"):
+        output.append(x['href'])
 
     return output
 
-
-def between(html, start, end):
-    found_first_element = False
-
-    for element in html.findAll(['p', 'h2']):
+def getLinksUntilTag(html, end, regex):
+    for element in html.findAll():
         if element == end:
             break
-        if element == start:
-            found_first_element = True
-        if found_first_element:
-            yield element
+        if element.name == 'a':
+            if re.match(regex, element['href']):
+                yield element
 
 
 wikiUrl = 'https://en.wikipedia.org'
-query = '/wiki/Abdullah_II_of_Jordan'
+query = '/wiki/Linked_data'
 
 url = wikiUrl + query
 reqs = requests.get(url)
