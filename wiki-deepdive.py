@@ -4,6 +4,8 @@ import re
 from neo4j import GraphDatabase
 
 class WikiDeepDive:
+    processedPages = []
+
     def __init__(self, uri, user, password):
         self.databaseConnection = GraphDatabase.driver(uri, auth=(user, password))
 
@@ -19,14 +21,7 @@ class WikiDeepDive:
                 "MERGE (parent)-[r:LINK]->(child) "
                 "RETURN parent, child, r"
             )
-
-    def node_exists(self, topic):
-        with self.databaseConnection.session() as session:
-            query = (
-                "OPTIONAL MATCH (n:WikiPage {topic: $topic})"
-                "RETURN n IS NULL AS Predicate"
-            )
-            return (session.run(query, topic=topic).single()[0])
+            session.run(query, topic=topic, link=link)
 
     def process_content(self, html):
         # parse html content
@@ -34,9 +29,7 @@ class WikiDeepDive:
 
         div = soup.find(id="mw-content-text")
 
-
         output = []
-
 
         for x in self.getLinksUntilTag(div, div.find('h2'), "^/wiki/(?!.*:)(?!.*#).*"):
             output.append(x['href'])
@@ -54,15 +47,15 @@ class WikiDeepDive:
 
     def processPage(self, query, limit):
         root = wikiUrl + query
-        
-        if (self.node_exists(root)):
+
+        if (root not in self.processedPages):
             print("Processing " + query + " with limit " + str(limit))
             url = wikiUrl + query
             reqs = requests.get(url)
             html = reqs.text
 
             links = self.process_content(html)
-
+            self.processedPages.append(root)
             for link in links :
                 linkRef = wikiUrl + link
 
@@ -73,11 +66,9 @@ class WikiDeepDive:
 
 if __name__ == "__main__":
     parser = WikiDeepDive("bolt://localhost:7687", "neo4j", "test")
-    #parser.print_greeting("hello, world")
-    
 
     wikiUrl = 'https://en.wikipedia.org'
-    query = '/wiki/Data_storage'
+    query = '/wiki/Wikipedia'
 
-    parser.processPage(query, 0)
+    parser.processPage(query, 2)
     parser.close()
