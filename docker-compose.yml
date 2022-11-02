@@ -1,0 +1,9 @@
+services:
+  neo4j:
+    container_name: testneo4j
+    image: neo4j:latest
+    environment:
+      - NEO4J_AUTH=neo4j/test
+    ports:
+      - "7474:7474"
+      - "7687:7687"
