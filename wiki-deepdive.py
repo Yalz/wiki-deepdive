@@ -2,6 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 import re
 from neo4j import GraphDatabase
+from WikiPage import WikiPage
+
 
 class WikiDeepDive:
     processedPages = []
@@ -12,16 +14,18 @@ class WikiDeepDive:
     def close(self):
         self.databaseConnection.close()
 
-    def add_node(self, topic, link):
+    def add_node(self, parentNode: WikiPage, childNode: WikiPage):
         with self.databaseConnection.session() as session:
             query = (
-                "MERGE (parent:WikiPage { topic: $topic }) "
-                "MERGE (child:WikiPage { topic: $link }) "
+                "MERGE (parent:WikiPage { title: $parentTitle, query: $parentQuery, url: $parentUrl }) "
+                "MERGE (child:WikiPage { title: $childTitle, query: $childQuery, url: $childUrl }) "
 
-                "MERGE (parent)-[r:LINK]->(child) "
+                "MERGE (child)-[r:DESCRIBES]->(parent) "
                 "RETURN parent, child, r"
             )
-            session.run(query, topic=topic, link=link)
+            session.run(query,
+                        parentTitle=parentNode.title, parentQuery=parentNode.query, parentUrl=parentNode.full_url(),
+                        childTitle=childNode.title, childQuery=childNode.query, childUrl=childNode.full_url())
 
     def process_content(self, html):
         # parse html content
@@ -32,43 +36,40 @@ class WikiDeepDive:
         output = []
 
         for x in self.getLinksUntilTag(div, div.find('h2'), "^/wiki/(?!.*:)(?!.*#).*"):
-            output.append(x['href'])
+            output.append(WikiPage(x['href'], x['title']))
 
         return output
 
     def getLinksUntilTag(self, html, end, regex):
-        for element in html.findAll(['a','h2']):
+        for element in html.select('div.mw-parser-output p a, h2'):
+
             if element == end:
                 break
             if element.name == 'a':
-                if element.get('href'): 
+                if element.get('href'):
                     if re.match(regex, element['href']):
                         yield element
 
-    def processPage(self, query, limit):
-        root = wikiUrl + query
+    def processPage(self, parent, limit):
 
-        if (root not in self.processedPages):
-            print("Processing " + query + " with limit " + str(limit))
-            url = wikiUrl + query
-            reqs = requests.get(url)
+        if parent.query not in self.processedPages:
+            print("Processing " + parent.query + " with limit " + str(limit))
+            reqs = requests.get(parent.full_url())
             html = reqs.text
 
             links = self.process_content(html)
-            self.processedPages.append(root)
-            for link in links :
-                linkRef = wikiUrl + link
+            self.processedPages.append(parent.query)
+            for link in links:
+                self.add_node(parent, link)
 
-                self.add_node(root, linkRef)
-
-                if ((limit - 1) != 0):
+                if (limit - 1) != 0:
                     self.processPage(link, limit - 1)
+
 
 if __name__ == "__main__":
     parser = WikiDeepDive("bolt://localhost:7687", "neo4j", "test")
 
-    wikiUrl = 'https://en.wikipedia.org'
     query = '/wiki/Wikipedia'
 
-    parser.processPage(query, 2)
+    parser.processPage(WikiPage(query, ""), 10)
     parser.close()

@@ -1,6 +1,6 @@
 services:
   neo4j:
-    container_name: testneo4j
+    container_name: neo4j
     image: neo4j:latest
     environment:
       - NEO4J_AUTH=neo4j/test
